@@ -44,7 +44,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,700;1,9..144,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -63,7 +63,7 @@
       --gray: #4A5568;
       --gray-light: #A0AEC0;
       --border: #E2E8F0;
-      --font-display: 'Syne', sans-serif;
+      --font-display: 'Fraunces', Georgia, serif;
       --font-body: 'Inter', sans-serif;
       --shadow-sm: 0 2px 8px rgba(13,27,42,0.08);
       --shadow: 0 6px 28px rgba(13,27,42,0.10);
@@ -71,8 +71,8 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--font-body); background: var(--white); color: var(--navy); line-height: 1.7; font-size: 16px; overflow-x: hidden; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: var(--font-body); background: var(--white); color: var(--navy); line-height: 1.7; font-size: 16px; overflow-x: hidden; max-width: 100%; }
 
     .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
     .section { padding: 80px 0; }
@@ -188,11 +188,12 @@
     }
     .hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(44px, 6vw, 76px);
+      font-size: clamp(36px, 6vw, 76px);
       font-weight: 800;
-      line-height: 1.0;
+      line-height: 1.05;
       color: var(--white);
       margin-bottom: 22px;
+      word-break: break-word;
     }
     .hero h1 .accent { color: var(--red); }
     .hero h1 .accent2 { color: var(--teal); }
@@ -265,9 +266,9 @@
     .f-success p { font-size: 14px; color: var(--gray); }
 
     /* DATA BAND */
-    .data-band { background: var(--red); padding: 52px 0; }
+    .data-band { background: var(--red); padding: 52px 0; overflow: hidden; }
     .data-band-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; text-align: center; }
-    .db-num { font-family: var(--font-display); font-size: 52px; font-weight: 800; color: white; line-height: 1; margin-bottom: 6px; }
+    .db-num { font-family: var(--font-display); font-size: 52px; font-weight: 800; color: white; line-height: 1; margin-bottom: 6px; word-break: break-word; }
     .db-label { font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.4; }
     .db-source { font-size: 10px; color: rgba(255,255,255,0.45); margin-top: 4px; }
 
@@ -446,10 +447,20 @@
       .data-band-grid { grid-template-columns: repeat(2,1fr); }
       .footer-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
+      .hero { padding: 56px 0 0; }
+      .hero-grid { padding-bottom: 52px; gap: 36px; }
     }
     @media (max-width: 640px) {
       .section { padding: 56px 0; }
       .data-band-grid { grid-template-columns: 1fr 1fr; }
+      .hero h1 { font-size: clamp(32px, 9vw, 52px); }
+      .hero-kicker { font-size: 10px; padding: 5px 12px; }
+      .hero-data-pills { gap: 10px; }
+      .data-pill { padding: 10px 14px; }
+      .data-pill .dp-num { font-size: 20px; }
+      .topbar { font-size: 12px; padding: 8px 16px; }
+      .db-num { font-size: 38px; }
+      .cta-inner { gap: 40px; }
     }
 
     @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
