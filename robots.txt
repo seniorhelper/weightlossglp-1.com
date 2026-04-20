@@ -1,0 +1,43 @@
+# robots.txt — weightlossglp-1.com
+# GLP-1 Weight Loss Clinical Data | Powered by Elevation Health
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# AI / LLM Crawlers — explicitly welcomed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /private/
+
+Sitemap: https://weightlossglp-1.com/sitemap.xml
+Crawl-delay: 2
