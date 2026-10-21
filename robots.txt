@@ -1,5 +1,5 @@
 # robots.txt — weightlossglp-1.com
-# GLP-1 Weight Loss Clinical Data | Powered by Elevation Health
+# GLP-1 weight loss clinical data guide | Domain for sale
 
 User-agent: Googlebot
 Allow: /
